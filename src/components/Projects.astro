@@ -1,0 +1,27 @@
+---
+import Card from './Card.astro';
+
+const projectsData = [
+  {
+    title: 'InstaClone',
+    subtitle: 'Full Stack Project',
+    description: 'Full stack project made with express, nodejs, and bootstrap',
+    year: '2021',
+    code: '',
+    demo: '',
+  },
+];
+---
+
+<section class="projects max-w-xl m-auto mt-10">
+  <h2 class="text-2xl font-semibold">Suggested Projects</h2>
+  <div class="container">
+    {
+      projectsData.map((project) => (
+        <Card>
+          <h3>{project.title}</h3>
+        </Card>
+      ))
+    }
+  </div>
+</section>

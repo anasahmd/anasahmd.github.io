@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Projects from '../components/Projects.astro';
+import Card from '../components/Card.astro';
+import profile from '../images/profile.jpeg';
+import linkedin from '../images/linkedin.svg';
+import github from '../images/github.svg';
+import twitter from '../images/twitter.svg';
+import mail from '../images/mail.svg';
+import location from '../images/location.svg';
+---
+
+<Layout>
+  <main class="mt-16">
+    <div class="mx-auto rounded-full aspect-square w-48 my-10">
+      <img
+        class="rounded-full p-0.5"
+        src={profile}
+        alt="Picture of Anas Ahmad"
+      />
+    </div>
+    <h1 class="text-5xl font-bold text-center">Hi, I'm Anas.</h1>
+
+    <div class="mt-10 flex gap-2 justify-center location-wrapper svg-filter">
+      <img class="w-3" src={location} alt="" />
+      <div class="text-lg font-semibold">Purnia, India</div>
+    </div>
+
+    <div class="introduction max-w-lg text-center mt-10 mx-auto">
+      <p class="text-lg">
+        I’m a web developer with experience in the MERN stack. I’m always
+        learning new technologies to improve my skills.
+      </p>
+    </div>
+
+    <div class="actions mt-10 mx-auto text-center">
+      <a class="px-6 py-4 rounded-lg bg-black text-white" href="">Resume</a>
+    </div>
+
+    <div class="socials mt-16">
+      <ul class="social-icons flex justify-center gap-8">
+        <li class="social-icon">
+          <a aria-label="Email to me" href="mailto: anasahmad0239@gmail.com"
+            ><img src={mail} alt="Mail Logo" class="w-8" /></a
+          >
+        </li>
+
+        <li class="social-icon">
+          <a
+            aria-label="LinkedIn Account"
+            href="https://www.linkedin.com/in/anasahmd/"
+            ><img src={linkedin} alt="LinkedIn Logo" class="w-8" /></a
+          >
+        </li>
+
+        <li class="social-icon">
+          <a aria-label="Github Account" href="https://github.com/anasahmd"
+            ><img src={github} alt="Github Logo" class="w-8" /></a
+          >
+        </li>
+        <li class="social-icon">
+          <a
+            aria-label="Twitter Account"
+            href="https://twitter.com/anas_ahmad35"
+            ><img src={twitter} alt="Twitter Logo" class="w-8" /></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="tech-stacks mt-16 max-w-xl mx-auto">
+      <h3 class="text-2xl font-bold">Tech Stacks:</h3>
+      <div class="text-lg mt-5">
+        <b>Front-End:</b> HTML & CSS, JavaScript, React.js, Astro, Bootstrap, Tailwind
+        CSS
+      </div>
+      <div class="text-lg mt-5">
+        <b>Back-End:</b> MongoDB, Node.js, Express
+      </div>
+      <div class="text-lg mt-5">
+        <b>Other:</b> Git, Linux CLI, Heroku, Netlify, Vercel
+      </div>
+    </div>
+
+    <Projects />
+  </main>
+</Layout>
+<!-- <Projects /> -->
+
+<style></style>
