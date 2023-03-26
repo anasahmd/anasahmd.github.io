@@ -5,21 +5,39 @@ const projectsData = [
   {
     title: 'InstaClone',
     subtitle: 'Full Stack Project',
-    description: 'Full stack project made with express, nodejs, and bootstrap',
-    year: '2021',
-    code: '',
-    demo: '',
+    description:
+      'Full stack project made with mongodb, express, nodejs, and bootstrap',
+    code: 'https://github.com/anasahmd/insta-clone',
+    demo: 'https://instaclone.anasahmad.dev/anasahmad',
   },
 ];
 ---
 
-<section class="projects max-w-xl m-auto mt-10">
+<section class="projects max-w-xl m-auto mt-24">
   <h2 class="text-2xl font-semibold">Suggested Projects</h2>
   <div class="container">
     {
       projectsData.map((project) => (
         <Card>
-          <h3>{project.title}</h3>
+          <h3 class="text-xl font-medium">{project.title}</h3>
+          <p class="text-base font-semibold mt-2">{project.subtitle}</p>
+          <p class="mt-4 text-lg">{project.description}</p>
+          <div class="mt-6 flex gap-10 font-semibold text-base">
+            <a
+              href={project.code}
+              target="_blank"
+              class="hover:-translate-y-px hover:translate-x-px"
+            >
+              Code &#8599
+            </a>
+            <a
+              href={project.demo}
+              target="_blank"
+              class="hover:-translate-y-px hover:translate-x-px"
+            >
+              Live preview &#8599
+            </a>
+          </div>
         </Card>
       ))
     }

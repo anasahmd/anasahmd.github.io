@@ -20,3 +20,7 @@ a {
   filter: invert(21%) sepia(8%) saturate(176%) hue-rotate(201deg)
     brightness(90%) contrast(97%);
 }
+
+.bg-cblack {
+  background-color: #323235;
+}
