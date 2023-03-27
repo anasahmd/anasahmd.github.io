@@ -8,10 +8,11 @@ import github from '../images/github.svg';
 import twitter from '../images/twitter.svg';
 import mail from '../images/mail.svg';
 import location from '../images/location.svg';
+import resume from '../files/resume.pdf';
 ---
 
 <Layout location="work">
-  <main class="mt-16 w-10/12 mx-auto flex-1">
+  <main class="sm:mt-16 mt-4 w-10/12 mx-auto flex-1">
     <div class="mx-auto rounded-full aspect-square w-48 mt-10">
       <img
         class="rounded-full p-0.5"
@@ -36,7 +37,8 @@ import location from '../images/location.svg';
     <div class="actions mt-16 mx-auto text-center">
       <a
         class="px-7 py-4 rounded-lg bg-cblack text-white text-base hover:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-300"
-        href="#">Resume</a
+        href={resume}
+        download="Anas Ahmad's resume">Resume</a
       >
     </div>
 
