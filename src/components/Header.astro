@@ -9,24 +9,22 @@ const { location } = Astro.props;
     <div class="font-semibold text-xl hidden sm:block">
       <a class="" href="/">anasahmad.dev</a>
     </div>
-    <ul class="">
-      <li class="flex gap-2 justify-center text-lg">
-        <div
-          class={`w-20 py-1 hover:font-semibold ${
-            location === 'work' &&
-            'bg-white px-3 font-semibold rounded-xl drop-shadow-sm'
-          }`}
-        >
-          <a href="/" class="">Work</a>
-        </div>
-        <div
-          class={`w-20 py-1 hover:font-semibold ${
-            location === 'about' &&
-            'bg-white px-3 font-semibold rounded-xl drop-shadow-sm'
-          }`}
-        >
-          <a href="/about">About</a>
-        </div>
+    <ul class="flex gap-2 justify-center text-lg">
+      <li
+        class={`w-20 py-1 hover:font-semibold ${
+          location === 'work' &&
+          'bg-white px-3 font-semibold rounded-xl drop-shadow-sm'
+        }`}
+      >
+        <a href="/" class="">Work</a>
+      </li>
+      <li
+        class={`w-20 py-1 hover:font-semibold ${
+          location === 'about' &&
+          'bg-white px-3 font-semibold rounded-xl drop-shadow-sm'
+        }`}
+      >
+        <a href="/about">About</a>
       </li>
     </ul>
   </nav>
