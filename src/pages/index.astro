@@ -12,86 +12,86 @@ import resume from '../files/anas_ahmad_resume.pdf';
 ---
 
 <Layout location="work">
-  <main class="sm:mt-16 mt-4 w-10/12 mx-auto flex-1">
-    <div class="mx-auto rounded-full aspect-square w-48 mt-10">
-      <img
-        class="rounded-full p-0.5"
-        src={profile}
-        alt="Picture of Anas Ahmad"
-      />
-    </div>
-    <h1 class="text-5xl font-bold text-center mt-14">Hi, I'm Anas.</h1>
+	<main class="sm:mt-16 mt-4 w-10/12 mx-auto flex-1">
+		<div class="mx-auto rounded-full aspect-square w-48 mt-10">
+			<img
+				class="rounded-full p-0.5"
+				src={profile}
+				alt="Picture of Anas Ahmad"
+			/>
+		</div>
+		<h1 class="text-5xl font-bold text-center mt-14">Hi, I'm Anas.</h1>
 
-    <div class="mt-8 flex gap-2 justify-center location-wrapper svg-filter">
-      <img class="w-3" src={location} alt="Location Icon" />
-      <div class="text-lg font-semibold">Purnia, India</div>
-    </div>
+		<div class="mt-8 flex gap-2 justify-center items-center location-wrapper">
+			<img class="w-3" src={location} alt="Location Icon" />
+			<div class="text-lg font-bold text-current mt-0.5">Purnia, India</div>
+		</div>
 
-    <div class="introduction max-w-lg text-center mt-8 mx-auto">
-      <p class="text-lg">
-        I’m a web developer with experience in the MERN stack. I’m always
-        learning new technologies to improve my skills.
-      </p>
-    </div>
+		<div class="introduction max-w-lg text-center mt-8 mx-auto">
+			<p class="text-lg">
+				I’m a web developer with a passion for learning. I love problem solving
+				and programming.
+			</p>
+		</div>
 
-    <div class="actions mt-16 mx-auto text-center">
-      <a
-        class="px-7 py-4 rounded-lg bg-cblack text-white text-base hover:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-300"
-        href={resume}
-        target="_blank">Resume</a
-      >
-    </div>
+		<div class="actions mt-16 mx-auto text-center">
+			<a
+				class="px-7 py-4 rounded-lg bg-cblack text-white text-base hover:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-300"
+				href={resume}
+				target="_blank">Resume</a
+			>
+		</div>
 
-    <div class="socials mt-16">
-      <ul class="social-icons flex justify-center items-center gap-8">
-        <li class="social-icon">
-          <a aria-label="Email to me" href="mailto: anasahmad0239@gmail.com"
-            ><img src={mail} alt="Mail Icon" class="w-8 svg-filter" /></a
-          >
-        </li>
+		<div class="socials mt-16">
+			<ul class="social-icons flex justify-center items-center gap-8">
+				<li class="social-icon">
+					<a aria-label="Email to me" href="mailto: anasahmad0239@gmail.com"
+						><img src={mail} alt="Mail Icon" class="w-8 svg-filter" /></a
+					>
+				</li>
 
-        <li class="social-icon">
-          <a aria-label="Github Account" href="https://github.com/anasahmd"
-            ><img src={github} alt="Github Logo" class="w-8 svg-filter" /></a
-          >
-        </li>
-        <li class="social-icon">
-          <a
-            aria-label="Twitter Account"
-            href="https://twitter.com/anas_ahmad35"
-            ><img src={twitter} alt="Twitter Logo" class="w-8 svg-filter" /></a
-          >
-        </li>
-        <li class="social-icon">
-          <a
-            aria-label="LinkedIn Account"
-            href="https://www.linkedin.com/in/anasahmd/"
-            ><img
-              src={linkedin}
-              alt="LinkedIn Logo"
-              class="w-8 svg-filter"
-            /></a
-          >
-        </li>
-      </ul>
-    </div>
+				<li class="social-icon">
+					<a aria-label="Github Account" href="https://github.com/anasahmd"
+						><img src={github} alt="Github Logo" class="w-8 svg-filter" /></a
+					>
+				</li>
+				<li class="social-icon">
+					<a
+						aria-label="Twitter Account"
+						href="https://twitter.com/anas_ahmad35"
+						><img src={twitter} alt="Twitter Logo" class="w-8 svg-filter" /></a
+					>
+				</li>
+				<li class="social-icon">
+					<a
+						aria-label="LinkedIn Account"
+						href="https://www.linkedin.com/in/anasahmd/"
+						><img
+							src={linkedin}
+							alt="LinkedIn Logo"
+							class="w-8 svg-filter"
+						/></a
+					>
+				</li>
+			</ul>
+		</div>
 
-    <div class="tech-stacks mt-24 max-w-xl mx-auto">
-      <h2 class="text-2xl font-bold">Tech Stacks:</h2>
-      <div class="text-lg mt-5">
-        <b>Front-end:</b> HTML & CSS, JavaScript(ES6), React, Astro, Bootstrap, Tailwind
-        CSS
-      </div>
-      <div class="text-lg mt-5">
-        <b>Back-end:</b> MongoDB, Express, Node
-      </div>
-      <div class="text-lg mt-5">
-        <b>Others:</b> Git, Linux CLI, Chrome DevTools, Heroku, Netlify, Railway
-      </div>
-    </div>
+		<div class="tech-stacks mt-24 max-w-xl mx-auto">
+			<h2 class="text-2xl font-bold">Tech Stacks:</h2>
+			<div class="text-lg mt-5">
+				<b>Front-end:</b> HTML & CSS, JavaScript(ES6), Astro, Bootstrap, Tailwind
+				CSS
+			</div>
+			<div class="text-lg mt-5">
+				<b>Back-end:</b> MongoDB, Express, Node
+			</div>
+			<div class="text-lg mt-5">
+				<b>Others:</b> Git, Linux CLI, Chrome DevTools
+			</div>
+		</div>
 
-    <Projects />
-  </main>
+		<Projects />
+	</main>
 </Layout>
 
 <style></style>
