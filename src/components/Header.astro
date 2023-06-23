@@ -10,29 +10,38 @@ const { location } = Astro.props;
 			<a class="" href="/">anasahmad.dev</a>
 		</div>
 		<ul class="flex gap-2 justify-center text-base">
-			<li
-				class={`w-20 py-2 hover:font-semibold ${
-					location === 'work' &&
-					'bg-white px-3 font-semibold rounded-xl drop-shadow-sm'
-				}`}
-			>
-				<a href="/" class="">Work</a>
+			<li class="w-20">
+				<a
+					href="/"
+					class={`w-20 px-5 py-3 ${
+						location === 'work' &&
+						'bg-white font-semibold rounded-3xl drop-shadow-sm hover:font-semibold'
+					}`}
+				>
+					Work
+				</a>
 			</li>
-			<li
-				class={`w-20 py-2 hover:font-semibold ${
-					location === 'blog' &&
-					'bg-white px-3 font-semibold rounded-xl drop-shadow-sm'
-				}`}
-			>
-				<a href="/blog">Blog</a>
+			<li class="w-20">
+				<a
+					href="/blog"
+					class={`w-20 px-5 py-3 ${
+						location === 'blog' &&
+						'bg-white font-semibold rounded-3xl drop-shadow-sm hover:font-semibold'
+					}`}
+				>
+					Blog
+				</a>
 			</li>
-			<li
-				class={`w-20 py-2 hover:font-semibold ${
-					location === 'about' &&
-					'bg-white px-3 font-semibold rounded-xl drop-shadow-sm'
-				}`}
-			>
-				<a href="/about">About</a>
+			<li class="w-20">
+				<a
+					href="/about"
+					class={`w-20 px-5 py-3 ${
+						location === 'about' &&
+						'bg-white font-semibold rounded-3xl drop-shadow-sm hover:font-semibold'
+					}`}
+				>
+					About
+				</a>
 			</li>
 		</ul>
 	</nav>
