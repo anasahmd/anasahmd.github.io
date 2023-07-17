@@ -2,47 +2,10 @@
 const { location } = Astro.props;
 ---
 
-<header>
-	<nav
-		class="max-w-2xl m-auto flex mt-5 text-center px-5 py-3 text-xl justify-center sm:justify-between items-center"
-	>
-		<div class="font-semibold text-xl hidden sm:block">
+<header class="w-[87.5%] mx-auto">
+	<nav class="max-w-lg mt-5 py-3 text-lg mx-auto">
+		<div class="text-neutral-600 font-medium">
 			<a class="" href="/">anasahmad.dev</a>
 		</div>
-		<ul class="flex gap-2 justify-center text-base">
-			<li class="w-20">
-				<a
-					href="/"
-					class={`w-20 px-5 py-3 ${
-						location === 'work' &&
-						'bg-white font-semibold rounded-3xl drop-shadow-sm hover:font-semibold'
-					}`}
-				>
-					Work
-				</a>
-			</li>
-			<li class="w-20">
-				<a
-					href="/blog"
-					class={`w-20 px-5 py-3 ${
-						location === 'blog' &&
-						'bg-white font-semibold rounded-3xl drop-shadow-sm hover:font-semibold'
-					}`}
-				>
-					Blog
-				</a>
-			</li>
-			<li class="w-20">
-				<a
-					href="/about"
-					class={`w-20 px-5 py-3 ${
-						location === 'about' &&
-						'bg-white font-semibold rounded-3xl drop-shadow-sm hover:font-semibold'
-					}`}
-				>
-					About
-				</a>
-			</li>
-		</ul>
 	</nav>
 </header>

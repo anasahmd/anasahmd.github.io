@@ -1,16 +1,22 @@
 ---
+import SocialLinks from './SocialLinks.astro';
 const date = new Date();
 const currentYear = date.getFullYear();
 ---
 
-<footer class="mt-16 px-16">
-  <div class="footer-container text-center mx-auto py-16 text-base font-normal">
-    Copyright © {currentYear} Anas Ahmad. All rights reserved.
-  </div>
+<footer class="mt-16">
+	<div
+		class="footer-container mx-auto py-10 text-sm font-normal text-slate-600 max-w-lg flex justify-between items-center w-[87.5%]"
+	>
+		<div class="font-medium text-lg">Anas Ahmad</div>
+		<div class="w-44">
+			<SocialLinks />
+		</div>
+	</div>
 </footer>
 
 <style>
-  footer {
-    background-color: #f1f1f1;
-  }
+	footer {
+		background-color: #f1f1f1;
+	}
 </style>

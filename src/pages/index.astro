@@ -1,93 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Projects from '../components/Projects.astro';
-import Card from '../components/Card.astro';
 import profile from '../images/profile.jpg';
-import linkedin from '../images/linkedin.svg';
-import github from '../images/github.svg';
-import twitter from '../images/twitter.svg';
-import mail from '../images/mail.svg';
-import location from '../images/location.svg';
-import resume from '../files/anas_ahmad_resume.pdf';
+import SocialLinks from '../components/SocialLinks.astro';
 ---
 
 <Layout location="work">
-	<main class="sm:mt-16 mt-4 w-10/12 mx-auto flex-1">
-		<div class="mx-auto rounded-full aspect-square w-48 mt-10">
+	<main class="mt-10 mx-auto flex-1 max-w-lg w-[87.5%]">
+		<div class="image w-full">
 			<img
-				class="rounded-full p-0.5"
 				src={profile}
 				alt="Picture of Anas Ahmad"
+				class="mx-auto rounded-lg w-full object-cover aspect-video object-bottom"
 			/>
 		</div>
-		<h1 class="text-5xl font-bold text-center mt-14">Hi, I'm Anas.</h1>
-
-		<div class="mt-8 flex gap-2 justify-center items-center location-wrapper">
-			<img class="w-3" src={location} alt="Location Icon" />
-			<div class="text-lg font-bold text-current mt-0.5">Purnia, India</div>
-		</div>
-
-		<div class="introduction max-w-lg text-center mt-8 mx-auto">
+		<h1 class="text-2xl font-medium mt-14">Hi, I'm Anas.</h1>
+		<div class="introduction max-w-lg mt-4 mx-auto">
 			<p class="text-lg">
 				I’m a web developer with a passion for learning. I love problem solving
 				and programming.
 			</p>
 		</div>
 
-		<div class="actions mt-16 mx-auto text-center">
+		<div class="actions mt-8 mx-auto">
 			<a
-				class="px-7 py-4 rounded-lg bg-cblack text-white text-base hover:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-300"
-				href={resume}
-				target="_blank">Resume</a
+				href="https://flowcv.com/resume/s4upnj31tf"
+				target="_blank"
+				class="underline decoration-neutral-300 underline-offset-8 transition-colors focus:decoration-neutral-400 hover:decoration-neutral-400"
 			>
-		</div>
-
-		<div class="socials mt-16">
-			<ul class="social-icons flex justify-center items-center gap-8">
-				<li class="social-icon">
-					<a aria-label="Email to me" href="mailto: anasahmad0239@gmail.com"
-						><img src={mail} alt="Mail Icon" class="w-8 svg-filter" /></a
-					>
-				</li>
-
-				<li class="social-icon">
-					<a aria-label="Github Account" href="https://github.com/anasahmd"
-						><img src={github} alt="Github Logo" class="w-8 svg-filter" /></a
-					>
-				</li>
-				<li class="social-icon">
-					<a
-						aria-label="Twitter Account"
-						href="https://twitter.com/anas_ahmad35"
-						><img src={twitter} alt="Twitter Logo" class="w-8 svg-filter" /></a
-					>
-				</li>
-				<li class="social-icon">
-					<a
-						aria-label="LinkedIn Account"
-						href="https://www.linkedin.com/in/anasahmd/"
-						><img
-							src={linkedin}
-							alt="LinkedIn Logo"
-							class="w-8 svg-filter"
-						/></a
-					>
-				</li>
-			</ul>
-		</div>
-
-		<div class="tech-stacks mt-24 max-w-xl mx-auto">
-			<h2 class="text-2xl font-bold">Tech Stacks:</h2>
-			<div class="text-lg mt-5">
-				<b>Front-end:</b> HTML & CSS, JavaScript(ES6), Astro, Bootstrap, Tailwind
-				CSS
-			</div>
-			<div class="text-lg mt-5">
-				<b>Back-end:</b> MongoDB, Express, Node
-			</div>
-			<div class="text-lg mt-5">
-				<b>Others:</b> Git, Linux CLI, Chrome DevTools
-			</div>
+				<span class="font-medium text-lg">Resume &#8599</span>
+			</a>
 		</div>
 
 		<Projects />
