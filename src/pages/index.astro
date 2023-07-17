@@ -2,11 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Projects from '../components/Projects.astro';
 import profile from '../images/profile.jpg';
-import SocialLinks from '../components/SocialLinks.astro';
 ---
 
 <Layout location="work">
-	<main class="mt-10 mx-auto flex-1 max-w-lg w-[87.5%]">
+	<main class="mt-8 mx-auto flex-1 max-w-lg w-11/12">
 		<div class="image w-full">
 			<img
 				src={profile}
@@ -14,21 +13,21 @@ import SocialLinks from '../components/SocialLinks.astro';
 				class="mx-auto rounded-lg w-full object-cover aspect-video object-bottom"
 			/>
 		</div>
-		<h1 class="text-2xl font-medium mt-14">Hi, I'm Anas.</h1>
-		<div class="introduction max-w-lg mt-4 mx-auto">
-			<p class="text-lg">
+		<h1 class="text-lg font-semibold mt-10">Hi, I'm Anas.</h1>
+		<div class="introduction max-w-lg mt-2 mx-auto">
+			<p class="text-base">
 				I’m a web developer with a passion for learning. I love problem solving
 				and programming.
 			</p>
 		</div>
 
-		<div class="actions mt-8 mx-auto">
+		<div class="actions mt-6 mx-auto">
 			<a
 				href="https://flowcv.com/resume/s4upnj31tf"
 				target="_blank"
 				class="underline decoration-neutral-300 underline-offset-8 transition-colors focus:decoration-neutral-400 hover:decoration-neutral-400"
 			>
-				<span class="font-medium text-lg">Resume &#8599</span>
+				<span class="font-medium text-base">Resume &#8599</span>
 			</a>
 		</div>
 

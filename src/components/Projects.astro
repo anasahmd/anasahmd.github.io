@@ -20,7 +20,7 @@ const projectsData = [
 ---
 
 <section class="projects max-w-xl m-auto mt-10">
-	<h2 class="font-medium text-2xl">Projects</h2>
+	<h2 class="font-semibold text-lg">Projects</h2>
 	<div class="container">
 		{
 			projectsData.map((project) => (
@@ -30,9 +30,9 @@ const projectsData = [
 						target="_blank"
 						class="underline decoration-neutral-300 underline-offset-4 transition-colors focus:decoration-neutral-400 hover:decoration-neutral-400"
 					>
-						<span class="font-medium text-lg">{project.title}</span>
+						<span class="font-medium text-base">{project.title}</span>
 					</a>
-					<p class="text-lg mt-1">{project.description}</p>
+					<p class="text-base mt-1">{project.description}</p>
 				</div>
 			))
 		}
