@@ -1,0 +1,47 @@
+@layer components {
+	.prose {
+		@apply [&>:not(:last-child)]:mb-6;
+
+		& p {
+			@apply my-6;
+		}
+
+		& h1,
+		& h2,
+		& h3 {
+			@apply font-semibold my-8;
+		}
+
+		& h1 {
+			@apply text-2xl;
+		}
+
+		& h2 {
+			@apply text-xl;
+		}
+
+		& h3 {
+			@apply text-lg;
+		}
+
+		& strong {
+			@apply font-medium;
+		}
+
+		& hr {
+			@apply border-neutral-300 dark:border-neutral-600 border-b-[0.5];
+		}
+
+		& ul {
+			@apply list-disc list-outside pl-4;
+		}
+
+		& ul > li {
+			@apply mb-6;
+		}
+
+		& img {
+			@apply mx-auto rounded my-6;
+		}
+	}
+}

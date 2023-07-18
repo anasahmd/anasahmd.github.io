@@ -1,11 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 import Projects from '../components/Projects.astro';
 import profile from '../images/profile.jpg';
 ---
 
-<Layout location="work">
-	<main class="mt-8 mx-auto flex-1 max-w-lg w-11/12">
+<MainLayout location="work">
+	<main class="mt-8 mx-auto flex-1 max-w-2xl w-11/12">
 		<div class="image w-full">
 			<img
 				src={profile}
@@ -14,7 +14,7 @@ import profile from '../images/profile.jpg';
 			/>
 		</div>
 		<h1 class="text-lg font-semibold mt-10">Hi, I'm Anas.</h1>
-		<div class="introduction max-w-lg mt-2 mx-auto">
+		<div class="introduction max-w-2xl mt-2 mx-auto">
 			<p class="text-base">
 				I’m a web developer with a passion for learning. I love problem solving
 				and programming.
@@ -33,6 +33,6 @@ import profile from '../images/profile.jpg';
 
 		<Projects />
 	</main>
-</Layout>
+</MainLayout>
 
 <style></style>

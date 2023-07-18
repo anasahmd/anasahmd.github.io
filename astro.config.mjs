@@ -1,9 +1,16 @@
 import { defineConfig } from 'astro/config';
-import serviceWorker from 'astrojs-service-worker';
 
 import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), serviceWorker()],
+	integrations: [
+		mdx(),
+		tailwind({
+			config: {
+				applyBaseStyles: false,
+			},
+		}),
+	],
 });
