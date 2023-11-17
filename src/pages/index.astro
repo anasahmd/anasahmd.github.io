@@ -1,38 +1,32 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import Projects from '../components/Projects.astro';
-import profile from '../images/profile.jpg';
+import BaseHead from "../components/BaseHead.astro";
+import IndexHeader from "../components/IndexHeader.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import SocialLinks from "../components/SocialLinks.astro";
+import Blog from "../components/Blog.astro";
+import Project from "../components/Project.astro";
 ---
 
-<MainLayout location="work">
-	<main class="mt-8 mx-auto flex-1 max-w-2xl w-11/12">
-		<div class="image w-full">
-			<img
-				src={profile}
-				alt="Picture of Anas Ahmad"
-				class="mx-auto rounded-lg w-full object-cover aspect-video object-bottom"
-			/>
-		</div>
-		<h1 class="text-lg font-semibold mt-10">Hi, I'm Anas.</h1>
-		<div class="introduction max-w-2xl mt-2 mx-auto">
-			<p class="text-base">
-				I’m a web developer with a passion for learning. I love problem solving
-				and programming.
-			</p>
-		</div>
-
-		<div class="actions mt-6 mx-auto">
-			<a
-				href="https://flowcv.com/resume/s4upnj31tf"
-				target="_blank"
-				class="underline decoration-neutral-300 underline-offset-8 transition-colors focus:decoration-neutral-400 hover:decoration-neutral-400"
-			>
-				<span class="font-medium text-base">Resume &#8599</span>
-			</a>
-		</div>
-
-		<Projects />
-	</main>
-</MainLayout>
-
-<style></style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body
+    class="max-w-2xl m-auto py-10 px-4 dark:bg-[#333] dark:text-[#fff] selection:bg-[#333] selection:text-[#fff] selection:dark:bg-[#fff] selection:dark:text-[#333]"
+    transition:animate="fade"
+  >
+    <IndexHeader />
+    <main class="mt-8">
+      <SocialLinks />
+      <Project />
+      <Blog />
+    </main>
+    <style>
+      h1,
+      h2 {
+        font-family: "Rammetto One", sans-serif;
+      }
+    </style>
+  </body>
+</html>

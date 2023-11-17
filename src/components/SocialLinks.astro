@@ -1,34 +1,60 @@
 ---
-import linkedin from '../images/linkedin.svg';
-import github from '../images/github.svg';
-import twitter from '../images/twitter.svg';
-import mail from '../images/mail.svg';
+const icons = [
+  {
+    link: "mailto: anasahmad0239@gmail.com",
+    svg: "/mail.svg",
+    label: "Email to me",
+  },
+  {
+    link: "https://github.com/anasahmd",
+    svg: "/github.svg",
+    label: "Github Account",
+  },
+  {
+    link: "https://twitter.com/anas_ahmad35",
+    svg: "/twitter.svg",
+    label: "Twitter Account",
+  },
+  {
+    link: "https://www.linkedin.com/in/anasahmd/",
+    svg: "/linkedin.svg",
+    label: "Linkedin Account",
+  },
+];
 ---
 
-<div class="socials">
-	<ul class="social-icons flex items-center gap-5 justify-end">
-		<li class="social-icon">
-			<a aria-label="Email to me" href="mailto: anasahmad0239@gmail.com"
-				><img src={mail} alt="Mail Icon" class="w-5 svg-filter" /></a
-			>
-		</li>
+<ul class="flex gap-4 items-center select-none">
+  {
+    icons.map((icon) => (
+      <li class="w-11 h-11 flex justify-center items-center hover:cursor-pointer hover:bg-[#333] dark:hover:bg-[#fff] rounded-full transition-all filter-svg">
+        <a href={icon.link} aria-label={icon.link} target="_blank">
+          <img src={icon.svg} alt={icon.label} class="w-6 h-6" />
+        </a>
+      </li>
+    ))
+  }
+</ul>
+<style>
+  .filter-svg img {
+    filter: invert(18%) sepia(5%) saturate(14%) hue-rotate(318deg)
+      brightness(95%) contrast(91%);
+    transition: all 0.25s ease-out;
+  }
 
-		<li class="social-icon">
-			<a aria-label="Github Account" href="https://github.com/anasahmd"
-				><img src={github} alt="Github Logo" class="w-5 svg-filter" /></a
-			>
-		</li>
-		<li class="social-icon">
-			<a aria-label="Twitter Account" href="https://twitter.com/anas_ahmad35"
-				><img src={twitter} alt="Twitter Logo" class="w-5 svg-filter" /></a
-			>
-		</li>
-		<li class="social-icon">
-			<a
-				aria-label="LinkedIn Account"
-				href="https://www.linkedin.com/in/anasahmd/"
-				><img src={linkedin} alt="LinkedIn Logo" class="w-5 svg-filter" /></a
-			>
-		</li>
-	</ul>
-</div>
+  .filter-svg:hover img {
+    filter: invert(100%) sepia(95%) saturate(0%) hue-rotate(173deg)
+      brightness(105%) contrast(104%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .filter-svg img {
+      filter: invert(100%) sepia(95%) saturate(0%) hue-rotate(173deg)
+        brightness(105%) contrast(104%);
+      transition: all 0.25s ease-out;
+    }
+    .filter-svg:hover img {
+      filter: invert(18%) sepia(5%) saturate(14%) hue-rotate(318deg)
+        brightness(95%) contrast(91%);
+    }
+  }
+</style>

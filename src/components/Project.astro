@@ -1,0 +1,36 @@
+---
+const projectsData = [
+  {
+    title: "Insta Clone",
+    description:
+      "Full stack project made with mongodb, express, nodejs, and bootstrap",
+    code: "https://github.com/anasahmd/insta-clone",
+  },
+  {
+    title: "Music Player",
+    description: "Play your offline music in browser",
+    code: "https://github.com/anasahmd/music-player",
+  },
+  {
+    title: "Tic Tac Toe",
+    description: "Tic Tac Toe project using javascript",
+    code: "https://github.com/anasahmd/tic-tac-toe",
+  },
+];
+---
+
+<section class="projects mt-10">
+  <h2 class="text-lg">Projects</h2>
+  <ul class="gap-4 mt-4">
+    {
+      projectsData.map((project) => (
+        <li class="mt-4">
+          <a href={project.code} target="_blank">
+            <h3 class="font-bold text-base underline">{project.title}</h3>
+            <p class="text-base mt-1">{project.description}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

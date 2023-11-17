@@ -1,0 +1,5 @@
+# don't tell the humans about this
+User-agent: *
+Allow: /
+
+Sitemap: https://anasahmad.dev/sitemap-index.xml

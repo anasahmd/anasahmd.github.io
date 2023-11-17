@@ -1,17 +1,30 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
 ---
 
-<MainLayout>
-	<main
-		class="flex-1 w-10/12 mx-auto max-w-2xl flex justify-center items-center flex-col gap-2 h-screen"
-	>
-		<h1 class="text-2xl font-semibold">404</h1>
-		<div class="text-2xl font-semibold">Page not found</div>
-		<a
-			href="/"
-			class="underline decoration-neutral-300 underline-offset-8 transition-colors focus:decoration-neutral-400 hover:decoration-neutral-400 mt-2"
-			>Go Back</a
-		>
-	</main>
-</MainLayout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="404 | Anas Ahmad" description="Oops! Nothing's here." />
+  </head>
+  <body
+    class="flex flex-col min-h-screen max-w-2xl m-auto py-10 px-4 dark:bg-[#333] dark:text-[#fff] selection:bg-[#333] selection:text-[#fff] selection:dark:bg-[#fff] selection:dark:text-[#333]"
+    transition:animate="fade"
+  >
+    <Header />
+    <main
+      class="flex-1 -mt-16 w-10/12 h-full flex justify-center items-center flex-col gap-2"
+    >
+      <h1 class="text-2xl">404</h1>
+      <h2 class="text-2xl">Page not found</h2>
+    </main>
+
+    <style>
+      h1,
+      h2 {
+        font-family: "Rammetto One", sans-serif;
+      }
+    </style>
+  </body>
+</html>

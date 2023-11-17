@@ -1,34 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
-import MainLayout from '../../layouts/MainLayout.astro';
-export async function getStaticPaths() {
-	const blogs = await getCollection('blog');
-	return blogs.map((blog) => ({
-		params: { slug: blog.slug },
-		props: { blog },
-	}));
-}
+import { type CollectionEntry, getCollection } from "astro:content";
+import BlogPost from "../../layouts/BlogPost.astro";
 
-const {
-	blog,
-	blog: {
-		data: { title, description, date },
-	},
-} = Astro.props;
-const { Content } = await blog.render();
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await post.render();
 ---
 
-<MainLayout location="blog">
-	<main class="flex-1 w-11/12 mx-auto max-w-2xl flex mt-8 flex-col">
-		<h1 class="text-2xl font-semibold">{title}</h1>
-		<div class="container mt-8">
-			<div class="flex justify-between w-full flex-col gap-3">
-				<div>{title}</div>
-				<div>{date}</div>
-				<article class="prose tracking-wide dark:prose-invert">
-					<Content />
-				</article>
-			</div>
-		</div>
-	</main>
-</MainLayout>
+<BlogPost {...post.data}>
+  <Content />
+</BlogPost>
