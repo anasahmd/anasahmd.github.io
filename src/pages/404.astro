@@ -1,30 +1,12 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title="404 | Anas Ahmad" description="Oops! Nothing's here." />
-  </head>
-  <body
-    class="flex flex-col min-h-screen max-w-2xl m-auto py-10 px-4 dark:bg-[#333] dark:text-[#fff] selection:bg-[#333] selection:text-[#fff] selection:dark:bg-[#fff] selection:dark:text-[#333]"
-    transition:animate="fade"
+<Layout title="404 | Anas Ahmad" description="Oops! Nothing's here.">
+  <div
+    class="flex-1 -mt-16 w-10/12 h-full flex justify-center items-center flex-col gap-2"
   >
-    <Header />
-    <main
-      class="flex-1 -mt-16 w-10/12 h-full flex justify-center items-center flex-col gap-2"
-    >
-      <h1 class="text-2xl">404</h1>
-      <h2 class="text-2xl">Page not found</h2>
-    </main>
-
-    <style>
-      h1,
-      h2 {
-        font-family: "Rammetto One", sans-serif;
-      }
-    </style>
-  </body>
-</html>
+    <h1 class="text-2xl">404</h1>
+    <h2 class="text-2xl">Page not found</h2>
+  </div>
+</Layout>
