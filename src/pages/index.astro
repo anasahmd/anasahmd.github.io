@@ -1,10 +1,10 @@
 ---
 import PageLayout from '../layouts/BaseLayout.astro'
 import Section from '../components/Section.astro'
-import Card from '../components/Card.astro'
+// import Card from '../components/Card.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
-import SkillLayout from '../components/SkillLayout.astro'
+// import SkillLayout from '../components/SkillLayout.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
@@ -12,10 +12,10 @@ import profile from '../assets/profile_picture.jpg'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['English', 'Hindi']
-const frontend = ['HTML', 'CSS', 'React', 'Astro', 'Tailwind', 'Bootstrap']
-const backend = ['MongoDB', 'Express', 'Next.js', 'Node.js']
-const others = ['Git', 'Jest', 'Python', 'C']
+// const languages = ['English', 'Hindi']
+// const frontend = ['HTML', 'CSS', 'React', 'Astro', 'Tailwind', 'Bootstrap']
+// const backend = ['MongoDB', 'Express', 'Next.js', 'Node.js']
+// const others = ['Git', 'Jest', 'Python', 'C']
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
